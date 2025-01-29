@@ -20,6 +20,10 @@ d() and d_calc() calculate the d with the given mean and variance at two points.
 
 gen_mean_of_var() calculates the mean of the proposed EWS, and gen_var_of_var() calculates the variance of the proposed EWS.
 
+tau_calc() calculates the tau value of an EWS
+
+generate_arbi_entries() generates the set of entries selected to calculate the EWS.
+
 
 
 

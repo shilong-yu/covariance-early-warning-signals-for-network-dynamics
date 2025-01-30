@@ -23,12 +23,6 @@ gen_mean_of_var() calculates the mean of the proposed EWS, and gen_var_of_var() 
 tau_calc() calculates the tau value of an EWS
 
 generate_arbi_entries() generates the set of entries selected to calculate the EWS.
-
-
-
-
-
-
    
 3. 2025 ANOVA for dw
 

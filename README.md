@@ -26,4 +26,10 @@ generate_arbi_entries() generates the set of entries selected to calculate the E
    
 3. 2025 ANOVA for dw
 
+read_file() reads the d and tau values.
+
+data_generation() prepares for ANOVA analyses.
+
+
+
  

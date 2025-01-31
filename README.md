@@ -16,7 +16,7 @@ equilibrium() and equilibrium() returns the value at which critical transition o
 
 read_matrix() reads a sample covariance matrix
 
-d() and d_calc() calculate the d with the given mean and variance at two points.
+d() and d_calc() calculate d with the given mean and variance at two points.
 
 gen_mean_of_var() calculates the mean of the proposed EWS, and gen_var_of_var() calculates the variance of the proposed EWS.
 

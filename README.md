@@ -30,7 +30,7 @@ read_file() reads the d and tau values.
 
 data_generation() prepares for ANOVA analyses.
 
-Figure 2.py generates Figure 2; Calculations for Figure 3.py and Figure 3.py generates Figure 3.
+Figure 2.py generates Figure 2; Calculations for Figure 3.py and Figure 3.py generate Figure 3.
 
 
 

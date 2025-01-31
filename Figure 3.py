@@ -49,74 +49,6 @@ if __name__ == '__main__':
     ax1.set_xticks([-0.8, -0.6, -0.4, -0.2, 0, 0.2])
     ax1.set_xticklabels(['-0.8', '-0.6', '-0.4', '-0.2', '0', '0.2'])
     ax1.set_ylim(bottom=-0.2)
-    # ax1.legend(loc='upper left', fontsize=10 * 1.5)
-    # ax1.tick_params(axis='both', labelsize=15)
-    # ax1.yticks(fontsize=10 * 1.5)
-    """
-    t_dmean, d_dmean, t_dstd, d_dstd = np.mean(tau_diags), np.mean(d_diags), np.std(tau_diags), np.std(d_diags)
-    t_rmean, d_rmean, t_rstd, d_rstd = np.mean(tau_rows), np.mean(d_rows), np.std(tau_rows), np.std(d_rows)
-    t_mmean, d_mmean, t_mstd, d_mstd = np.mean(tau_minors), np.mean(d_minors), np.std(tau_minors), np.std(d_minors)
-    t_omean, d_omean, t_ostd, d_ostd = np.mean(tau_offs), np.mean(d_offs), np.std(tau_offs), np.std(d_offs)
-    ax1.errorbar(t_dmean, d_dmean, xerr=t_dstd, yerr=d_dstd, color='r', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax1.errorbar(t_rmean, d_rmean, xerr=t_rstd, yerr=d_rstd, color='y', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax1.errorbar(t_mmean, d_mmean, xerr=t_mstd, yerr=d_mstd, color='g', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax1.errorbar(t_omean, d_omean, xerr=t_ostd, yerr=d_ostd, color='b', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-
-    # plt.title('d vs τ for random minor, off-diagonal, on-diagonal, and row selections')
-    ax1.set_ylabel('d', fontsize=10 * 1.5, fontstyle='italic')
-    ax1.set_xlabel('τ', fontsize=10 * 1.5, fontstyle='italic')
-    ax1.legend(loc='upper left', fontsize=10 * 1.5)
-    ax1.tick_params(axis='both', labelsize=15)
-    # ax1.yticks(fontsize=10 * 1.5)
-    # Create an 8x8 grid, initializing all cells as white
-    grid_size = 12
-    grid = np.ones((grid_size, grid_size, 3))  # All cells start as white
-
-    # Define colors
-    red = [1, 0, 0]  # RGB for red
-    green = [0, 1, 0]  # RGB for green
-    blue = [0, 0, 1]  # RGB for blue
-    yellow = [1, 1, 0]  # RGB for yellow
-
-    # Set colors for specific positions based on the given coordinates
-    grid[0, 0] = red
-    grid[1, 1] = red
-    grid[2, 2] = red
-    grid[9, 9] = red
-    grid[11, 11] = red
-
-    grid[0, 1] = blue
-    grid[1, 5] = blue
-    grid[5, 0] = blue
-    grid[9, 6] = blue
-    grid[10, 3] = blue
-
-    grid[2, 0] = yellow
-    grid[2, 1] = yellow
-    grid[2, 3] = yellow
-    grid[2, 7] = yellow
-    grid[2, 10] = yellow
-
-    # Set green squares for (4<=i<=7, 4<=j<=7)
-    for i in range(3, 8):
-        for j in range(3, 8):
-            grid[i, j] = green
-
-    # Display the grid without ticks
-    ax2.imshow(grid)
-
-    # Draw the grid lines manually
-    for i in range(0, grid_size + 1):
-        ax2.axhline(i - 0.5, color='black', lw=2)  # Horizontal lines
-        ax2.axvline(i - 0.5, color='black', lw=2)  # Vertical lines
-    """
-    # Remove ticks (grid lines) from the axes
-    # .set_xticks([])
-    # ax2.set_yticks([])
     ax1.text(-0.03, 1, "(a)", transform=ax1.transAxes, fontsize=24, verticalalignment='top',
              horizontalalignment='right')
     ax2.text(-0.03, 1, "(b)", transform=ax2.transAxes, fontsize=24, verticalalignment='top',
@@ -136,26 +68,7 @@ if __name__ == '__main__':
     ax2.set_xticks([-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4])
     ax2.set_xticklabels(['-0.8', '-0.6', '-0.4', '-0.2', '0', '0.2', '0.4'] )
     ax2.set_ylim(bottom=-0.2)
-    """
-    t_dmean, d_dmean, t_dstd, d_dstd = np.mean(tau_diags), np.mean(d_diags), np.std(tau_diags), np.std(d_diags)
-    t_rmean, d_rmean, t_rstd, d_rstd = np.mean(tau_rows), np.mean(d_rows), np.std(tau_rows), np.std(d_rows)
-    t_mmean, d_mmean, t_mstd, d_mstd = np.mean(tau_minors), np.mean(d_minors), np.std(tau_minors), np.std(d_minors)
-    t_omean, d_omean, t_ostd, d_ostd = np.mean(tau_offs), np.mean(d_offs), np.std(tau_offs), np.std(d_offs)
-    ax3.errorbar(t_dmean, d_dmean, xerr=t_dstd, yerr=d_dstd, color='r', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax3.errorbar(t_rmean, d_rmean, xerr=t_rstd, yerr=d_rstd, color='y', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax3.errorbar(t_mmean, d_mmean, xerr=t_mstd, yerr=d_mstd, color='g', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-    ax3.errorbar(t_omean, d_omean, xerr=t_ostd, yerr=d_ostd, color='b', ecolor='black',
-                 elinewidth=1.5, capsize=3)
-
-    # plt.title('d vs τ for random minor, off-diagonal, on-diagonal, and row selections')
-    ax3.set_ylabel('d', fontsize=10 * 1.5, fontstyle='italic')
-    ax3.set_xlabel('τ', fontsize=10 * 1.5, fontstyle='italic')
-    ax3.legend(loc='upper left', fontsize=10 * 1.5)
-    ax3.tick_params(axis='both', labelsize=15)
-    """
+    
     d_diags, d_offs, d_minors, d_rows, tau_diags, \
         tau_offs, tau_minors, tau_rows, d_uppers, d_edges, tau_uppers, tau_edges, d_corr, tau_corr = read_file('surfers-d-D-hetero-2024')
     # d_offs, d_minors, d_rows, tau_diags, \

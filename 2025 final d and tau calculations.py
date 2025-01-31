@@ -178,15 +178,6 @@ def calculate_d_and_tau(Z, C1, C2, C_ensembles, u_crit, N):
 
 
 def draw(step, d_diags, d_offs, d_minors, d_rows, tau_diags, tau_offs, tau_minors, tau_rows):
-    # draw the d values for random off-diagonal and on-diagonal selections
-    # plt.scatter(step, d_diags, edgecolors='r', facecolors='none', label='on diag')
-    # plt.scatter(step, d_offs, edgecolors='b', facecolors='none', label='off diag')
-    # plt.scatter(step, d_minors, edgecolors='g', facecolors='none', label='minors')
-    # plt.scatter(step, d_rows, edgecolors='y', facecolors='none', label='rows')
-    # plt.ylabel('d values')
-    # plt.xlabel('iterations')
-    # plt.title('d values for randomized off-diagonal, on-diagonal, minor and row selections')
-    # plt.legend(loc='lower right')
     print('The average of d values for random on-diagonal selections is ', np.mean(np.array(d_diags)))
     print('The average of d values for random off-diagonal selections is ', np.mean(np.array(d_offs)))
     print('The average of d values for random minor selections is ', np.mean(np.array(d_minors)))
@@ -195,22 +186,6 @@ def draw(step, d_diags, d_offs, d_minors, d_rows, tau_diags, tau_offs, tau_minor
     print('The average of tau values for random off-diagonal selections is ', np.mean(np.array(tau_offs)))
     print('The average of tau values for random minor selections is ', np.mean(np.array(tau_minors)))
     print('The average of tau values for random row selections is ', np.mean(np.array(tau_rows)))
-    """
-    # plt.show()
-    # draw the d vs tau values for random off-diagonal and on-diagonal selection
-    plt.scatter(tau_diags, d_diags, edgecolors='r', facecolors='none', label='on-diagonal')
-    plt.scatter(tau_rows, d_rows, edgecolors='y', facecolors='none', label='row')
-    plt.scatter(tau_minors, d_minors, edgecolors='g', facecolors='none', label='minor')
-    plt.scatter(tau_offs, d_offs, edgecolors='b', facecolors='none', label='random')
-
-    plt.title('d vs τ for random minor, off-diagonal, on-diagonal, and row selections')
-    plt.ylabel('d', fontsize=10 * 1.5, fontstyle='italic')
-    plt.xlabel('τ', fontsize=10 * 1.5, fontstyle='italic')
-    plt.legend(loc='upper left', fontsize=10 * 1.5)
-    plt.xticks(fontsize=10 * 1.5)
-    plt.yticks(fontsize=10 * 1.5)
-    plt.show()
-    """
 
 
 # d_diags, d_offs, tau_diags, tau_offs, d_minors, d_rows, tau_minors, tau_rows = calculate_d_and_tau(Z)
